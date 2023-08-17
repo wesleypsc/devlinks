@@ -87,11 +87,16 @@ body *{
   z-index: 1;
 
   transform: translateY(-50%);
+  
+  animation: slideOff 0.4s;
+}
+
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
 }
 
 .light #switch button{
-  left: unset;
-  right: 0;
+  animation: slideOn 0.4s forwards;
 }
 
 #switch span{
@@ -174,5 +179,25 @@ footer{
 @media(min-width:768px){
   body {
     background: var(--bg-url-desktop) no-repeat top center/cover;
+  }
+}
+
+@keyframes slideOn{
+  from{
+    left: 0%;
+  }
+
+  to{
+    left: 50%;
+  }
+}
+
+@keyframes slideOff{
+  from{
+    left: 50%;
+  }
+
+  to{
+    left: 0%;
   }
 }
