@@ -10,4 +10,4 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 document.querySelector("#switch").addEventListener("click", () => {
   document.documentElement.classList.toggle("light");
-})
+}) 
